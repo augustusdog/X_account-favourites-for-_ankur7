@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Lister</title>
+    <style>
+        body { 
+        width: 300px; 
+        }
+
+        ul { 
+        list-style-type: none; 
+        padding: 0; 
+        }
+
+        li { 
+        padding: 3px 20px 3px 3px; /* Increase right padding to make space for the X */
+        position: relative; 
+        border-bottom: 1px solid #ccc; /* Optional for visual separation */
+        }
+
+        .delete-btn {
+        cursor: pointer;
+        position: absolute;
+        right: 5px; /* Ensure it's not too close to the edge */
+        top: 50%;
+        transform: translateY(-50%);
+        color: red; /* Make it red for visibility */
+        font-weight: bold; /* Make the X thicker */
+        font-size: 16px; /* Increase size if necessary */
+        background-color: rgba(255, 255, 255, 0.7); /* Slight background for better visibility */
+        padding: 0 5px; /* Padding around the 'X' for easier clicking */
+        border-radius: 3px; /* Optional: rounded corners */
+        z-index: 10; /* Ensure it's on top */
+        }
+    </style>
+</head>
+<body>
+    <button id="saveUrl">Add</button>
+    <ul id="urlList"></ul>
+
+    <script src="popup.js"></script>
+</body>
+</html>
